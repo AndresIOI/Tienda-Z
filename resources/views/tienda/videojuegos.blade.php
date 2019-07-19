@@ -11,7 +11,7 @@
                         <a href="{{ route('home') }}">Inicio</a>
                         <a href="{{ route('videojuegos') }}">Videojuegos</a>
                         <a href="{{ route('consolas') }}">Consolas</a>
-                        <a href="{{ route('carrito') }}">Carrito</a>
+                        <a href="{{ route('cart-show') }}">Carrito</a>
                         @if (Route::has('login'))
                             @auth
                                 <div class="dropdown">
@@ -68,7 +68,11 @@
                 <img src="{{ asset('img/'.$videojuego->img) }}" alt="">
                 <h4>{{$videojuego->nombre}}</h4>
                 <p>Precio: $ {{number_format($videojuego->precio,2)}}</p>
-            <a href="{{ route('cart-add',$videojuego->id) }}">Agregar al carrito</a>
+                @if ($videojuego->cantidad == 0)
+                <a>Producto fuera de stock</a>
+                @else
+                <a href="{{ route('cart-add',$videojuego->id) }}">Agregar al carrito</a>
+                @endif
             </div>
             @endforeach
         </div>

@@ -11,7 +11,7 @@
                             <a href="{{ route('home') }}">Inicio</a>
                             <a href="{{ route('videojuegos') }}">Videojuegos</a>
                             <a href="{{ route('consolas') }}">Consolas</a>
-                            <a href="{{ route('carrito') }}">Carrito</a>
+                            <a href="{{ route('cart-show') }}">Carrito</a>
                             @if (Route::has('login'))
                                 @auth
                                     <div class="dropdown">

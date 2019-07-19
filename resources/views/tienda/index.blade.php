@@ -54,78 +54,41 @@
 <section class="seccion-productos-inicio seccion">
         <div class="seccion-nintendo contenedor">
             <div class="titulo-nintendo">
-                <h2>Nintendo Switch</h2>
+                <h2>Ultimas Consolas Agregadas</h2>
             </div>
             <div class="productos">
+                @foreach ($consolas as $consola)
                 <div class="producto">
-                    <a href=""><img src="img/nintendo_switch.jpg"></a>
-                    <h4>Nintendo Switch</h4>
-                    <p>Precio: $8,000</p>
-                    <a href="">Agregar al carrito</a>
+                    <a href=""><img src="{{ asset('img/'.$consola->img) }}"></a>
+                    <h4>{{$consola->nombre}}</h4>
+                    <p>$ {{number_format($consola->precio,2)}}</p>
+                    @if ($consola->cantidad == 0)
+                    <a>Producto fuera de stock</a>
+                    @else
+                    <a href="{{ route('cart-add',$consola->id) }}">Agregar al carrito</a>
+                    @endif
                 </div>
-                <div class="producto">
-                    <a href=""><img src="img/mario_bros.jpg"></a>
-                    <h4>Mario Maker 2</h4>
-                    <p>Precio: $8,000</p>
-                    <a href="">Agregar al carrito</a>
-                </div>
-                <div class="producto">
-                    <a href=""><img src="img/pokemon.jpg"></a>
-                    <h4>Pokemon Let's Go - Pikachu</h4>
-                    <p>Precio: $8,000</p>
-                    <a href="">Agregar al carrito</a>
-                </div>
+                @endforeach
             </div>
         </div>
         <div class="seccion-xbox contenedor">
                 <div class="titulo-xbox">
-                    <h2>Xbox One</h2>
+                    <h2>Ultimos Videojuegos Agregados</h2>
                 </div>
                 <div class="productos">
+                    @foreach ($videojuegos as $videojuego)
                     <div class="producto">
-                        <a href=""><img src="img/xbox.jpg"></a>
-                        <h4>Xbox Ones</h4>
-                        <p>Precio: $8,000</p>
-                        <a href="">Agregar al carrito</a>
+                        <a href=""><img src="{{ asset('img/'.$videojuego->img) }}"></a>
+                        <h4>{{$videojuego->nombre}}</h4>
+                        <p>$ {{number_format($videojuego->precio,2)}}</p>
+                        @if ($videojuego->cantidad == 0)
+                        <a>Producto fuera de stock</a>
+                        @else
+                        <a href="{{ route('cart-add',$videojuego->id) }}">Agregar al carrito</a>
+                        @endif
                     </div>
-                    <div class="producto">
-                        <a href=""><img src="img/batV.jpg"></a>
-                        <h4>Battlefield V</h4>
-                        <p>Precio: $8,000</p>
-                        <a href="">Agregar al carrito</a>
-                    </div>
-                    <div class="producto">
-                        <a href=""><img src="img/darksider.jpg"></a>
-                        <h4>Darksaiders</h4>
-                        <p>Precio: $8,000</p>
-                        <a href="">Agregar al carrito</a>
-                    </div>
+                    @endforeach
                 </div>
             </div>
-            <div class="seccion-playstation contenedor">
-                    <div class="titulo-playstation">
-                        <h2>Playstation 4</h2>
-                    </div>
-                    <div class="productos">
-                        <div class="producto">
-                            <a href=""><img src="img/playstation.jpg"></a>
-                            <h4>Playstation 4 Pro</h4>
-                            <p>Precio: $8,000</p>
-                            <a href="">Agregar al carrito</a>
-                        </div>
-                        <div class="producto">
-                            <a href=""><img src="img/destiny.jpg"></a>
-                            <h4>Destiny 2</h4>
-                            <p>Precio: $8,000</p>
-                            <a href="">Agregar al carrito</a>
-                        </div>
-                        <div class="producto">
-                            <a href=""><img src="img/ark.jpg"></a>
-                            <h4>ARK Survival Evolved</h4>
-                            <p>Precio: $8,000</p>
-                            <a href="">Agregar al carrito</a>
-                        </div>
-                    </div>
-                </div>
     </section>
 @endsection

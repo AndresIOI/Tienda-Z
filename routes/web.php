@@ -12,7 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('tienda.index');
+	$consolas = App\Producto::where('categoria_id',1)->latest()
+	->take(3)
+	->get();
+	$videojuegos = App\Producto::where('categoria_id',2)->latest()
+	->take(5)
+	->get();
+    return view('tienda.index',compact('consolas','videojuegos'));
 })->name('home');
 Auth::routes();
 //Route::get('/home', 'HomeController@index')->name('home');

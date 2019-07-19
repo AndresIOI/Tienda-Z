@@ -137,7 +137,7 @@ class PaymentController extends Controller
 
 		//if (empty(\Input::get('PayerID')) || empty(\Input::get('token'))) {
 		if (empty($payerId) || empty($token)) {
-			return \Redirect::route('shop')
+			return \Redirect::route('home')
 				->with('message', 'Hubo un problema al intentar pagar con Paypal');
 		}
 
