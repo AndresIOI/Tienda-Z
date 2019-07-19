@@ -1,0 +1,408 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+}
+.sitio{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.bg-rojo{
+    background-color: #f95959 !important;
+  }
+  .bg-amarillo{
+    background-color: #facf5a !important;
+  }  
+  .bg-azul{
+    background-color: #455d7a !important;
+  }
+  .bg-verde{
+    background-color: #4d7a45 !important;
+    color: #ffffff !important;
+  }
+.contenido-sitio{
+    flex: 1;
+}
+/** Globales **/
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.centrar-texto{
+    text-align: center;
+}
+.seccion{
+    padding: 2.5rem 0;
+}
+.linea{
+    border-bottom: solid 1px #000000;
+    margin: 2rem 0;
+}
+.color-negro{
+    color: #000000 !important;
+}
+.borde-negro{
+    border: 1px solid #000000 !important;
+}
+/** Header **/
+.header-sitio{
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url("https://cdn.pixabay.com/photo/2015/12/06/17/44/video-game-1079756_960_720.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    min-height: 60rem;  
+}
+/** Barra Navegacion**/
+.barra-fixed{
+    width: 100%;
+    position: fixed;
+    transition: .5s;
+    overflow: hidden;
+}
+.barra-navegacion{
+    background-color: #414141;
+    height: auto;
+}
+.navegacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem;
+}
+.logo-navegacion a{
+    text-decoration: none;
+}
+.logo-navegacion h1{
+    color: #ffffff;
+    padding: 1rem 1rem;
+    transition: .5s;
+}
+.logo-navegacion h1 span{
+    color:  #ca3e47;
+}
+.enlaces-navegacion{
+    display: flex;
+}
+.enlaces-navegacion a{
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 2rem;
+    transition: .5s;
+}
+.enlaces-navegacion a:last-child{
+    margin-right: 0;
+}
+.enlaces-navegacion a:hover{
+    color: #ca3e47;
+}
+/** Header **/
+.header-mensaje{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.contenido-mensaje{
+    color: #ffffff;
+}
+.contenido-mensaje h4 span{
+    color: #ca3e47;
+}
+.contenido-mensaje h1{
+    max-width: 60rem;
+}
+.botones-header{
+    margin-top: 5rem
+}
+.boton{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    margin-right: 2rem;
+    border: 1px solid #ffffff;
+    transition: .3s;
+}
+.boton:last-child{
+    margin-right: 0;
+}
+.boton:hover{
+    background-color: #ca3e47;
+    text-decoration: none;
+}
+/** Productos Inicio **/
+.seccion-productos-inicio{
+    background-color: #ffffff;
+}
+/** Nintendo Switch**/
+.titulo-nintendo h2{
+    width: 120rem;
+    border: 1px solid #ca3e47;
+    padding: .5rem 2.5rem;
+    border-radius: .25rem;
+    color: #ffffff;
+    background-color: #ca3e47;
+}
+.productos{
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    margin-left: 2.5rem;
+}
+.producto{
+    width: 33rem;
+    height: 33rem;
+    border-radius: .8rem;
+    box-shadow: 0 .2rem .2rem rgba(0, 0, 0, .2);
+    overflow: hidden;
+    margin: 2rem;
+    text-align: center;
+}
+.producto:hover{
+    box-shadow: 0 1.2rem 1.6rem rgba(0, 0, 0, .2);
+}
+.producto img{
+    width: 55%;
+    height: 22rem;
+}
+.producto h4{
+    font-weight: 700;
+}
+.producto p{
+    padding: 1rem 0;
+    font-size: 16px;
+    font-weight: 300;
+}
+.producto a{
+    font-weight: 500;
+    text-decoration: none;
+    color: #3498db;
+    transition: .3s;
+}
+.producto a:hover{
+    color: #ca3e47;
+}
+/** Xbox **/
+.titulo-xbox h2{
+    width: 120rem;
+    border: 1px solid #3eca3e;
+    padding: .5rem 2.5rem;
+    border-radius: .25rem;
+    color: #ffffff;
+    background-color: #3eca3e;
+}
+/** Playstation **/
+.titulo-playstation h2{
+    width: 120rem;
+    border: 1px solid #3e5fca;
+    padding: .5rem 2.5rem;
+    border-radius: .25rem;
+    color: #ffffff;
+    background-color: #3e5fca;
+}
+/** Footer**/
+.footer-sitio{
+    background-color: #414141;
+    height: 20vh;
+    padding-bottom: 0;
+}
+.contenido-footer{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer h5{
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.footer a{
+    color: #000000;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+.footer a:hover{
+    color:  #ca3e47;
+}
+
+/******************** Videojuegos ********************/
+
+.header-videojuegos{
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url("https://cdn.pixabay.com/photo/2016/07/28/16/26/atari-2600-1548365_960_720.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 35vh;
+}
+/******************** Consolas ********************/
+.header-consolas{
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url("https://cdn.pixabay.com/photo/2016/11/02/14/14/x-box-1791671_960_720.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 35vh;
+}
+/******************** Carrito *********************/
+.header-carrito{
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url("https://cdn.pixabay.com/photo/2014/02/01/18/00/money-256314_960_720.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 35vh;
+}
+/******************** Inicio de Sesion ********************/
+.header-inicio_sesion{
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url("https://cdn.pixabay.com/photo/2016/11/29/02/36/call-1866884_960_720.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 35vh;
+}
+.header-mensaje-general{
+    height: 100%;
+}
+.contenido-mensaje-general{
+    display: flex;
+    padding: 14rem 0;
+    justify-content: center;
+}
+.contenido-mensaje-general h1{
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 5rem;
+}
+.barra-general{
+    display: flex;
+    justify-content: space-between;
+}
+.barra-general h1{
+    text-transform: uppercase;
+}
+.productos-general{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-top: 2.5rem;
+}
+.producto-general{
+    width: 22rem;
+    height: 29rem;
+    border-radius: .8rem;
+    box-shadow: 0 .2rem .2rem rgba(0, 0, 0, .2);
+    overflow: hidden;
+    margin: 2rem;
+    text-align: center;
+}
+.producto-general img{
+    width: 65%;
+    height: 15rem;
+}
+.producto-general h4{
+    padding-top: 1.5rem;
+    font-weight: 700;
+}
+.producto-general p{
+    padding: 1rem 0;
+    font-size: 16px;
+    font-weight: 300;
+}
+.producto-general a{
+    font-weight: 500;
+    text-decoration: none;
+    color: #3498db;
+    transition: .3s;
+}
+.producto-general a:hover{
+    color: #ca3e47;
+}
+.producto-general:hover{
+    box-shadow: 0 1.2rem 1.6rem rgba(0, 0, 0, .2);
+}
+.carrito table{
+    width: 100%;
+}
+.carrito table thead tr td{
+    font-weight: 700;
+    text-align: center;
+}
+
+.carrito table tbody tr td{
+    padding: 2rem 0 ;
+    text-align: center;
+}
+.carrito table tbody tr td:last-child{
+    padding: 0 0 ;
+    text-align: center;
+}
+.carrito table tbody tr img{
+    height: 15rem;
+}
+.totales{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.total-flex h3{
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+.total-flex h3:last-child{
+    margin-bottom: 0;
+}
+.total-flex{
+    display: flex;
+}
+.dropdown-content{
+    display: none;
+    position: fixed;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    margin-right: 50px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .row_inicio{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+  }
+.contenedor.seccion.inicio_sesion{
+    display: flex;
+height: 320px;}
+
+.boton-trash-cart{
+    text-decoration: none;
+    color: #000000;
+    font-weight: 700;
+    font-size: 1.4rem;
+    padding: .5rem 1.5rem;
+    margin-right: 1rem;
+    border: 1px solid #000000;
+    background-color: #ca3e47;
+}
+.boton-trash-cart:hover{
+    color: #000000;
+}
